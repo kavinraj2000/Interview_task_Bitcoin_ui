@@ -77,8 +77,8 @@ class ChooseColorDialog extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  OutlinedButton(
-                    onPressed: () {
+                  InkWell(
+                    onTap: () {
                       context.goNamed(RouteNames.home);
                     },
                     child: const Text("Set Default"),

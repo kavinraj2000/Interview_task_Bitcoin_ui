@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:interview/app/route_name.dart';
-import 'package:interview/dashboard/view/mobile/widgets/otpverfication.dart';
+import 'package:interview/dashboard/view/widgets/otpverfication.dart';
 
 class UserVerificationScreen extends StatelessWidget {
   const UserVerificationScreen({super.key});

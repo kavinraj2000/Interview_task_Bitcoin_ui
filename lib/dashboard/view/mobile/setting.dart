@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:interview/app/route_name.dart';
-import 'package:interview/dashboard/view/mobile/widgets/bottom_navigation.dart';
+import 'package:interview/dashboard/view/widgets/bottom_navigation.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});

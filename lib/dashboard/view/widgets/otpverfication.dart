@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interview/dashboard/view/mobile/colordialouge.dart';
+import 'package:interview/dashboard/view/mobile/color_dialouge.dart';
 import 'package:logger/web.dart';
 
 class Otpverfication extends StatelessWidget {

@@ -4,7 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:interview/app/route_name.dart';
 import 'package:interview/dashboard/bloc/dashboard_bloc.dart';
 import 'package:interview/dashboard/model/dashboardmodel.dart';
-import 'package:interview/dashboard/view/mobile/widgets/bottom_navigation.dart';
+import 'package:interview/dashboard/view/widgets/bottom_navigation.dart';
+import 'package:interview/dashboard/view/widgets/dropdown_widget.dart';
 import 'package:logger/logger.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -15,9 +16,7 @@ class DashboardScreen extends StatelessWidget {
     final log = Logger();
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF9F9FC),
       appBar: AppBar(
-        backgroundColor: Colors.white,
         elevation: 0,
         title: Row(
           children: [
@@ -41,7 +40,7 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
             Container(
-              width: 100,
+              width: 150,
               height: 40,
               decoration: BoxDecoration(color: Colors.grey.shade100, borderRadius: BorderRadius.circular(20)),
               child: const TextField(
@@ -121,7 +120,7 @@ class DashboardScreen extends StatelessWidget {
                   const SizedBox(height: 20),
                   _buildActionButtons(context),
                   const SizedBox(height: 30),
-                  _buildPortfolioSection(dashboardData.first),
+                  DropdownWidget(dashboardData: dashboardData.first),
                   const SizedBox(height: 30),
                   _buildMarketStatSection(dashboardData.first),
                 ],
@@ -154,6 +153,7 @@ class DashboardScreen extends StatelessWidget {
 
   Widget _buildBanner() {
     return Container(
+      height: 150,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -214,86 +214,6 @@ class DashboardScreen extends StatelessWidget {
         Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
         const SizedBox(height: 4),
       ],
-    );
-  }
-
-  Widget _buildPortfolioSection(DashboardModel dashboardData) {
-    return Column(
-      children: [
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("My Portfolio", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            Row(
-              children: [
-                Text("Monthly", style: TextStyle(color: Colors.grey, fontSize: 14)),
-                Icon(Icons.keyboard_arrow_down, color: Colors.grey),
-              ],
-            ),
-          ],
-        ),
-        const SizedBox(height: 16),
-        SizedBox(
-          height: 120,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: dashboardData.cryptoAssets.length,
-            itemBuilder: (context, index) {
-              final asset = dashboardData.cryptoAssets[index];
-              return Padding(
-                padding: const EdgeInsets.only(right: 12),
-                child: _portfolioCard(
-                  asset.name,
-                  asset.symbol,
-                  asset.amount.toStringAsFixed(2),
-                  asset.changePercentage,
-                  Icons.currency_bitcoin,
-                ),
-              );
-            },
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _portfolioCard(String name, String code, String amount, double percent, IconData icon) {
-    return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Container(
-        width: 160,
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(icon, color: Colors.orange, size: 20),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    name,
-                    style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Text('\$$amount', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-            const SizedBox(height: 4),
-            Text(
-              "${percent >= 0 ? '+' : ''}${percent.toStringAsFixed(2)}%",
-              style: TextStyle(
-                fontSize: 12,
-                color: percent >= 0 ? Colors.green : Colors.red,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 

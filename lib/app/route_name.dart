@@ -1,4 +1,4 @@
-import 'package:interview/dashboard/view/mobile/moreview.dart';
+import 'package:interview/dashboard/view/mobile/all_Functions_Screen.dart';
 
 mixin RouteNames {
   static const home = '/home';
@@ -7,6 +7,4 @@ mixin RouteNames {
   static const setting = '/setting';
   static const verfication = '/verfication';
   static const otp = '/otp';
-  static const update = '/update';
-  static const twoFactorScreen = '/twoFactorScreen';
 }

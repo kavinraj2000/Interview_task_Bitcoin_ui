@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:interview/app/route_name.dart';
-import 'package:interview/dashboard/view/mobile/widgets/bottom_navigation.dart';
+import 'package:interview/dashboard/view/widgets/bottom_navigation.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -9,9 +9,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
-        backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
         title: const Text(
@@ -27,7 +25,7 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: Colors.black,
         tooltip: 'Main Action',
         onPressed: () {},
-        child: const Icon(Icons.biotech_outlined, color: Colors.white, size: 30),
+        child: const Icon(Icons.add, color: Colors.white, size: 30),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interview/dashboard/bloc/dashboard_bloc.dart';
 import 'package:interview/dashboard/repo/repository.dart';
-import 'package:interview/dashboard/view/mobile/dashboard_mobileview.dart';
+import 'package:interview/dashboard/view/mobile/dashboard_screen.dart';
 
 import 'package:responsive_framework/responsive_framework.dart';
 

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:interview/app/route_name.dart';
 import 'package:interview/dashboard/view/dashboard.dart';
-import 'package:interview/dashboard/view/mobile/moreview.dart';
+import 'package:interview/dashboard/view/mobile/all_Functions_Screen.dart';
 import 'package:interview/dashboard/view/mobile/profile_screen.dart';
 import 'package:interview/dashboard/view/mobile/setting.dart';
 import 'package:interview/dashboard/view/mobile/userverfication.dart';
 import 'package:interview/dashboard/view/mobile/verfication.dart';
-import 'package:interview/dashboard/view/mobile/widgets/otpverfication.dart';
+import 'package:interview/dashboard/view/widgets/otpverfication.dart';
 
 class Routes {
   GoRouter router = GoRouter(
@@ -48,13 +48,7 @@ class Routes {
           return UserVerificationScreen();
         },
       ),
-      GoRoute(
-        name: RouteNames.twoFactorScreen,
-        path: '/twoFactorScreen',
-        builder: (BuildContext context, GoRouterState state) {
-          return TwoFactorScreen();
-        },
-      ),
+
       GoRoute(
         name: RouteNames.otp,
         path: '/otp',
