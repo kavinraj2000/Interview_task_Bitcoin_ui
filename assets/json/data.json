@@ -1,0 +1,47 @@
+{
+    "data":[
+{
+  "user": {
+    "name": "Nora William",
+    "avatarUrl": "https://via.placeholder.com/40"
+  },
+  "portfolio": {
+    "totalBalance": 17250.13,
+    "changeAmount": 4572.99,
+    "changePercentage": 35.8,
+    "isPositive": true
+  },
+  "cryptoAssets": [
+    {
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "amount": 4957.496,
+      "changePercentage": 3.28,
+      "iconUrl": "https://via.placeholder.com/32/FF9500/FFFFFF?text=₿"
+    },
+    {
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "amount": 4957.496,
+      "changePercentage": 3.28,
+      "iconUrl": "https://via.placeholder.com/32/627EEA/FFFFFF?text=Ξ"
+    }
+  ],
+  "marketStats": [
+    {
+      "name": "Tether",
+      "symbol": "USDT",
+      "price": 0.99,
+      "changePercentage": -0.01,
+      "iconUrl": "https://via.placeholder.com/32/26A17B/FFFFFF?text=₮"
+    },
+    {
+      "name": "Binance coin",
+      "symbol": "BNB",
+      "price": 548.825,
+      "changePercentage": 1.32,
+      "iconUrl": "https://via.placeholder.com/32/F3BA2F/FFFFFF?text=B"
+    }
+  ]
+}
+    ]}
